@@ -1,0 +1,105 @@
+{% extends "basic.html" %}
+{% block basic %}
+
+  <div class="jumbotron jumbotron-fluid" id="background">
+    <div class="container-fluid">
+      <h1 id="intro">Hi &nbsp; &nbsp; I'm</h1>
+      <h1 id="intro">Bibek Ghimire...</h1>
+    </div>
+  </div>
+
+  <!-- ********************************* -->
+  <!-- About Me -->
+  <!-- ********************************* -->
+  <div class="row" id="photo">
+    <div class="col-sm-4" style="background-color: #e3f2fd;"><img class="me" src="../static/me.png" alt=""></div>
+    <div class="col-sm-8 meintro" style="background-color: #fff;">
+      <p class="intro tag-blue">HELLO, MY NAME IS</p>
+      <p class="intro">BIBEK GHIMIRE</p>
+      <br>
+      <br>
+
+      <p>I am an Aspiring Electronics and Communications Engineering(ECE) student at
+        <b>Institute of Engineering (IOE) Purwanchal Campus, Dharan, Nepal</b>.I have a drive for learning
+        all things related to technology. Being in the ECE program has been one of
+        the best decision I have ever made since it allows me to not wait till the
+        classroom to learn something new. The technology always evolving, this means
+        there is always something new to learn. Learning is one of my most important
+        values and this motivates me everyday.
+      </p>
+      <div class="button">
+        <a class="btn btn btn-light about-button" href="about" role="button">Learn More...</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- **************************************************** -->
+  <!-- Experience -->
+  <!-- **************************************************** -->
+  <div class="experience" id="experience">
+    <div class="container-fluid">
+      <div class="tag-white text-center" style="color:white;">
+        MY EXPERIENCE
+      </div>
+      <p style="text-align:center; padding-top:20px;">Take a look at my experiences here...</p>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a class="btn btn btn-light experience-button" href="{{ url_for('projects') }}">Projects</a>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn btn-light experience-button" href="{{ url_for('resume') }}">Resume</a>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn btn-light experience-button" href="{{ url_for('resume') }}">Experience</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ******************************************************** -->
+  <!-- Contact -->
+  <!-- ******************************************************** -->
+  <div class="contact" id="contact">
+    <div class="container-fluid">
+      <div class="tag-blue text-center">
+        Contact
+      </div>
+      <p>Hey there!</p>
+
+      <p>Thanks for visiting my website. I am excited that you are excited to get
+        in touch with me.
+      </p>
+
+      <p>You can contact me at this email:</p>
+
+      <p><a class="btn btn btn-light about-button" href="mailto:bibek.ghimire83@gmail.com"
+        role="button">bibek.ghimire83@gmail.com</a></p>
+
+        <p>Or find me on other platforms:</p>
+
+        <div class="">
+          <ul class="links">
+            <li>
+              <a href="https://github.com/bibekghimire-ith" onclick="_gaq.push(['_trackEvent', 'exit', 'footer', 'GitHub']);" target="_blank"><span class="fa fa-github fa-2x"></span> GitHub</a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/bibek-ghimire-47542a130/" onclick="_gaq.push(['_trackEvent', 'exit', 'footer', 'Linkedin']);" target="_blank"><span class="fa fa-linkedin fa-2x"></span> LinkedIn </a></li>
+            
+          </ul>
+        </div>
+        <br>
+
+          </div>
+        </div>
+
+
+        <!-- ****************************************************** -->
+        <!-- Footer -->
+        <!-- ****************************************************** -->
+        <footer>
+          <div class="footer">
+            <strong><span>&copy; 2018 Made by Bibek Ghimire</span></strong>
+          </div>
+      </footer>
+
+{% endblock %}

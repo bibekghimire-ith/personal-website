@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bibek Ghimire Personal Website</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type= "text/css" href=" {{ url_for('static', filename='css/about.css') }}">
+
+    <style media="screen">
+    footer{
+      text-align: center;
+      height: 50px;
+      color: #5c1;
+      background-color: #0D122B;
+    }
+    </style>
+
+  </head>
+  <body>
+
+
+{% extends 'layout.html' %}
+    {% block content %}
+    {% include 'includes/_navbar2.html' %}
+        <div class="container">
+
+          {% block body %}{% endblock %}
+        </div>
+
+<br><br>
+
+<h1>IoT Health Kit Monitoring System</h1>
+<br>
+<h3>Introduction</h3>
+<div>
+	<p>Technology plays the major role in healthcare not only for sensory devices but also in communication, recording and display device. It is very important to monitor various medical parameters and post operational days. Hence the latest trend in Healthcare communication method using IOT is adapted. Internet of things serves as a catalyst for the healthcare and plays prominent role in wide range of healthcare applications.</p>
+
+	<p>Routine medical checkup is a preventive measure to avoid illness and improve health quality. However, not everyone has the time to do so and some are constrained by the distance between home and the hospital. This condition causes a demand of a system capable of monitoring one’s health status that is not only portable, but also low in price so that it is accessible to people of all economic level.</p>
+
+
+</div>
+
+<div>
+	<h3>Methodology</h3>
+	<p>This project uses Arduino Uno as microcontroller to interface different health sensors. This healthcare kit comprises of a temperature sensor, heartbeat sensor and ECG (Electrocardiogram) sensor. The arduino picks up the sensor data and sends to the network through GSM/GPRS module and hence provides real time monitoring of health care parameters for doctors. The reading values of different sensors are displayed by a LCD display. Also, these readings are uploaded to a webpage in real-time which can be viewed by authenticated personnel such as doctors or patients themselves. The data can be accessed anytime by doctors or patients. At emergency condition an alert SMS message and email is sent to the doctor by GSM/GPRS module connected to the controller. This prototype enables users to improve health related risks and reduce healthcare costs by collecting, recording, analyzing and sharing large data streams in real time and efficiently. This project helps to reduce the headache of patient to visit to doctor every time he need to check his heart beat rate, temperature etc.</p>
+
+	 <h3>Component Required</h3>
+	 <ul>
+	 	<li>Arduino Uno</li>
+	 	<li>ECG Sensor</li>
+	 	<li>Temperature Sensor</li>
+	 	<li>GSM/GPRS Module</li>
+	 	<li>Heart Beat sensor</li>
+	 	<li>16*2 LCD Display</li>
+	 </ul>
+
+
+
+	<h3>Softwares Used</h3>
+	<ul>
+		<li>Arduino IDE</li>
+		<li>Sublime Text Builder</li>
+		<li>Python IDE</li>
+	</ul>
+
+
+
+	<h3>Block Diagram</h3>
+	<p><img src="{{ url_for('static', filename="bd.jpg") }}"></p>
+<div class="caption text-center text-info"><i>Block Diagram of System</i></div>
+<br><br><br>
+	<h3>Flow Chart</h3>
+	<p><img src="{{ url_for('static', filename="fc.jpg") }}"></p>
+	<div class="caption text-center text-info"><i>Flowchart of System</i></div>
+</div>
+
+<br><br>
+
+<div>
+	<h3>Output</h3>
+	<p>This prototype measures body temperature and plse rate, and displays in webpage. If the body temperature and pulse rate
+	are normal, it displays normal, else it displays suffering from fever. Also, it displays
+	ECG graph as python graph in connected PC.</p>
+	<p><a href="https://iot-health-kit.herokuapp.com/">Link to sample webpage...</a></p>
+	<img src="{{ url_for('static', filename="1.jpg") }}"" width="550" height="500">
+	<img src="{{ url_for('static', filename="2.jpg") }}" width="550" height="500">
+	<br>
+	<div class="caption text-center text-info"><i>Screenshot of Website</i></div>
+	<br><br>
+	<img src="{{ url_for('static', filename="3.jpg") }}" width="800" height="600">
+	<div class="caption text-center text-info"><i>Screenshot of ECG</i></div>
+
+</div>
+
+<div>
+	<h3>Applications</h3>
+	<ul>
+		<li>It is used to display patient parameter in the various hospitals.</li>
+		<li>It can be used in remote areas where there is lack of hospitals and doctors.</li>
+		<li>It can be used in old age homes to get to monitor the various parameters of a sick person in old age homes.</li>
+
+		<li>It is very important for regular visiting patient whose health status is monitored regularly.</li>
+
+	</ul>
+	<br>
+
+	<h3>FUTURE DEVELOPMENT</h3>
+	<p>In addition to the system can also provide more than one numbers so that more than one user can
+	receive emergency message. According to availability of sensors or development in biomedical
+	trend more parameter can be sense and monitor which will drastically improve the efficiency of
+	the wireless monitoring system in biomedical field. Furthermore- this project can be enhanced by
+	using different parameters such as:</p>
+
+	<ul>
+		<li>Retinal size, weight and age can be included to control the parameters in the future.
+		</li>
+		<li>This system can be developed by using advanced technologies like GPS. In future we can
+			send this data to a remote internet and we can add the module of voice alarm system to indicate
+			parameters crossing the threshold value.</li>
+		<li> Patient voice recognition system: IC HM2007 can be used to recognition the voice samples of
+			the patients for the better security purpose.</li>
+		<li> A camera can be fitted into the system so as to enable the base station to get a real time view
+			of the battlefield.</li>
+
+	</ul>
+
+</div>
+
+<br><br><br>
+
+  <footer>&copy; 2018 Made by Bibek Ghimire</footer>
+
+	{% endblock %}
+
+  </body>
+</html>

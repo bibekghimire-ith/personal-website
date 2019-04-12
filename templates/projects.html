@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bibek Ghimire Projects</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/layout.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/reset.css') }}">
+
+    <style media="screen">
+    footer{
+      text-align: center;
+      height: 50px;
+      color: #5c1;
+      background-color: #0D122B;
+    }
+    </style>
+
+
+  </head>
+  <body>
+
+    {% extends 'layout.html' %}
+
+    {% block content %}
+    {% include 'includes/_navbar2.html' %}
+        <div class="container">
+
+          {% block body %}{% endblock %}
+        </div>
+
+    <main>
+      <!-- *************************************
+        Jumbotron Section
+      -->
+<br>
+        <div class="jumbotron bg-success text-white">
+          <div><h3 class="text-white text-center"><em>My Projects</em></h3></div>
+        </div>
+
+    <!-- *************************************
+     Recent Projects Section
+   -->
+   <div class="section">
+     <div class="container">
+       <h2>Recent Projects</h2>
+
+       <!-- ********************************** -->
+       <!-- IoT based Health Monitoring Kit -->
+       <div class="row recent-proj">
+         <div class="col-md-6">
+           <div class="project-description">
+             <p class="project-title"><em><a target="_blank" href="{{ url_for('healthkit') }}">IoT based Health Monitoring Kit</a></em></p>
+             <p>Nov 2018</p>
+             <p>This is a mini project of 6<sup>th</sup> semester of ECE as per the syllabus of TOE. I collaborated with a group of 4 students from same faculty to develop a prototype of a affordable and portable health kit.
+               This prototype could measure the body temperature and pulse-rate of a patient and display the same in webpage. Also, Electrocardiograph(ECG) of patient was displayed using python graph.
+             </p>
+             <p>This prototype used Arduino as microcontroller and SIM800A GSM/GPRS module was used to send the value of measured body parameters to the webpage.</p>
+             <p>During the project, I developed the webpage, configured and programmed ECG graph and GSM/GPRS module.</p>
+
+             <ul>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith/IoT-healthkit">GitHub Repository</a></li>
+                <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://iot-health-kit.herokuapp.com/">Site</a></li>
+             </ul>
+             <p><strong>Technologies Used:</strong> Arduino, Python, HTML, CSS, Bootstrap, Git, Flask</p>
+           </div>
+         </div>
+
+         <div class="col-md-6">
+           <img src="{{ url_for('static', filename="p1.png") }}" style="width:500px; height=500px">
+           <div class="caption text-center text-info"><i>Screenshot of Website</i></div>
+           <br> <br> <br>
+           <img src="{{ url_for('static', filename="p11.png") }}" style="width:500px; height=500px">
+           <div class="caption text-center text-info"><i>Screenshot of ECG Graph</i></div>
+         </div>
+       </div>
+<br> <br>
+<hr>
+
+       <!-- ********************************** -->
+       <!-- Personal Website  -->
+       <div class="row recent-proj">
+         <div class="col-md-6">
+           <div class="project-description">
+             <p class="project-title"><em>Personal Website</em></p>
+             <p> Nov 2018 - Present</p>
+             <p>My first attempt at making a personal website. My expertise is not in frontend but I've tried my best. Any suggestions and feedback are warmly welcomed.</p>
+             <ul>
+               <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith/personal-website">GitHub Repository</a></li>
+               <li class="d-inline-flex  align-items-center mr-2"> | </li>
+               <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="">Site</a></li>
+             </ul>
+             <p><strong>Technologies Used:</strong> HTML, CSS, Bootstrap, Git, Flask, Heroku App Engine</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 pics">
+           <img src="{{ url_for('static', filename='website.png') }}" style="width:500px; height=500px">
+         </div>
+       </div>
+       <br> <br>
+       <hr>
+       <!-- ********************************** -->
+       <!-- 3D Car in OpenGL -->
+       <div class="row recent-proj">
+         <div class="col-md-6">
+           <div class="description">
+             <p class="project-title"><em>3D Car in OpenGL</em></p>
+             <p>March 2018</p>
+             <p>A Twilio SMS app where the users texts the name of a Pokemon to a number and it will return an image and pokedex description of the Pokemon.</p>
+             <ul>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+             </ul>
+             <p><strong>Technologies Used:</strong> HTML, CSS, Bootstrap, Git, GitHub Pages</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 pics">
+           <img src="../static/images/projects/recent/pokedex.PNG">
+         </div>
+       </div>
+
+       <!-- ********************************** -->
+       <!-- Legacy Repository -->
+       <div class="row recent-proj">
+         <div class="col-md-6">
+           <div class="project-description">
+             <p class="project-title"><em>Legacy Repository</em></p>
+             <p>June 2018</p>
+             <p>A respository containing everything that I did on my S&P Dow Jones Indices internship.</p>
+             <ul>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+             </ul>
+             <p><strong>Technologies Used:</strong> HTML, CSS, Bootstrap, Git, Flask, Google App Engine, GitHub Pages, Docker, Java, Eclipse, Postman, Spring Framework, Python, NLTK, TextBlob, Gensim</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 pics">
+           <img style="width: 470px;" src="../static/images/projects/recent/legacy_repo.PNG">
+         </div>
+       </div>
+
+       <!-- ********************************** -->
+       <!-- Flask Tutorial -->
+       <div class="row recent-proj">
+         <div class="col-md-6">
+           <div class="project-description">
+             <p class="project-title"><em>Flask Tutorial</em></p>
+             <p>June 2018</p>
+             <p>My first tutorial where I teach others how to create a web application using Flask and deploy to the cloud using Google App Engine. It is also in the process of publishing in the freeCodeCamp's Medium Publication</p>
+             <ul>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith/">Site</a></li>
+                <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">Article</a></li>
+             </ul>
+             <p><strong>Technologies Used:</strong> HTML, CSS, Bootstrap, Git, Flask, Google App Engine</p>
+           </div>
+         </div>
+
+         <div class="col-md-6 pics">
+           <img style="width: 470px;" src="../static/images/projects/recent/flask_tutorial_banner.png">
+         </div>
+       </div>
+
+   </div>
+ </div>
+
+ <hr>
+
+   <!-- *************************************
+       Presentation Section
+   -->
+   <div class="section">
+     <div class="container">
+       <h2>Presentation Section</h2>
+
+       <!-- ********************************** -->
+       <!-- Row 1 -->
+       <div class="row">
+
+         <!-- ********************************** -->
+         <!-- Fotomatic -->
+         <div class="col-md-6">
+           <div class="front-end-project">
+             <img class="pics" src="../static/images/projects/front_end/fotomatic.PNG">
+             <div class="project-description text-center">
+               <p class="project-title"><em>Frame Relay</em></p>
+               <ul >
+                 <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                 <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                 <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+              </ul>
+             </div>
+
+           </div>
+         </div>
+
+         <!-- ********************************** -->
+         <!-- Jumpstart -->
+         <div class="col-md-6">
+           <div class="front-end-project">
+             <img class="pics" src="../static/images/projects/front_end/jumpstart.PNG">
+             <div class="project-description text-center">
+               <p class="project-title"><em>Iot Health Monitoring kit</em></p>
+               <ul>
+                 <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                 <li class="d-inline-flex  align-items-center mr-2"> | </li>
+                 <li class="d-inline-flex  align-items-center mr-2"><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+              </ul>
+             </div>
+
+           </div>
+         </div>
+
+       </div>
+
+   <!-- ********************************** -->
+   <!-- Row 2 -->
+   <div class="row">
+
+     <!-- ********************************** -->
+     <!-- Secret Agent Supply -->
+     <div class="col-md-6">
+       <div class="front-end-project">
+         <img class="pics" src="../static/images/projects/front_end/secret_agent.PNG">
+         <div class="project-description text-center">
+           <p class="project-title"><em>Video Survelliance Robot</em></p>
+           <ul >
+             <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+             <li> | </li>
+             <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+          </ul>
+         </div>
+
+       </div>
+     </div>
+
+       <!-- ********************************** -->
+       <!-- Tea Cozy -->
+       <div class="col-md-6">
+         <div class="front-end-project">
+           <img class="pics" src="../static/images/projects/front_end/tea_cozy.PNG">
+           <div class="project-description text-center">
+             <p class="project-title"><em>Tea Cozy</em></p>
+             <ul >
+               <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+               <li> | </li>
+               <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+           </ul>
+           </div>
+         </div>
+       </div>
+
+     </div> <!-- End Row 2 -->
+
+
+     <!-- ********************************** -->
+     <!-- Row 3 -->
+     <div class="row">
+
+       <!-- ********************************** -->
+       <!-- Colmar Academy -->
+       <div class="col-md-6">
+         <div class="front-end-project">
+           <img class="pics" src="../static/images/projects/front_end/colmar_academy.PNG">
+           <div class="project-description text-center">
+             <p class="project-title"><em>Colmar Academy</em></p>
+             <ul >
+               <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+               <li> | </li>
+               <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+            </ul>
+           </div>
+
+         </div>
+       </div>
+
+         <!-- ********************************** -->
+         <!-- Tea Cozy -->
+         <div class="col-md-6">
+           <div class="front-end-project">
+             <img class="pics" src="../static/images/projects/front_end/shell_optics.PNG">
+             <div class="project-description text-center">
+               <p class="project-title"><em>Tortoiseshell Optics</em></p>
+               <ul >
+                 <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                 <li> | </li>
+                 <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+             </ul>
+             </div>
+           </div>
+         </div>
+
+       </div> <!-- End Row 3 -->
+
+       <!-- ********************************** -->
+       <!-- Row 4 -->
+       <div class="row">
+
+         <!-- ********************************** -->
+         <!-- Tribute Page -->
+         <div class="col-md-6">
+           <div class="front-end-project">
+             <img class="pics" src="../static/images/projects/front_end/tribute_page.PNG">
+             <div class="project-description text-center">
+               <p class="project-title"><em>Sherwynn Tribute Page</em></p>
+               <ul >
+                 <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                 <li> | </li>
+                 <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+              </ul>
+             </div>
+
+           </div>
+         </div>
+
+           <!-- ********************************** -->
+           <!-- Quote Generator -->
+           <div class="col-md-6">
+             <div class="front-end-project">
+               <img class="pics" src="../static/images/projects/front_end/random_quote.PNG">
+               <div class="project-description text-center">
+                 <p class="project-title"><em>Quote Generator</em></p>
+                 <ul >
+                   <li><a target="_blank" href="https://github.com/bibekghimire-ith">GitHub Repository</a></li>
+                   <li> | </li>
+                   <li><a target="_blank" href="https://github.com/bibekghimire-ith">Site</a></li>
+               </ul>
+               </div>
+             </div>
+           </div>
+
+         </div> <!-- End Row 3 -->
+
+
+
+   </div> <!-- End Front-End Container -->
+ </div> <!-- End Front-End Section -->
+
+
+
+   <!-- *************************************
+     Buttons Section
+   -->
+   <div class="container text-center github-btn">
+     <a class="btn btn-primary" target="_blank" href="https://github.com/bibekghimire-ith" role="button">Find more on GitHub</a>
+   </div>
+
+</main>
+
+
+
+ <!-- *************************************
+   Footer Section
+ -->
+ <footer>&copy; 2018 Made by Bibek Ghimire</footer>
+    {% endblock %}
+
+  </body>
+</html>

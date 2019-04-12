@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bibek Ghimire Personal Website</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type= "text/css" href=" {{ url_for('static', filename='css/about.css') }}">
+
+    <style media="screen">
+    footer{
+      text-align: center;
+      height: 50px;
+      color: #5c1;
+      background-color: #0D122B;
+    }
+    </style>
+
+  </head>
+  <body>
+
+
+{% extends 'layout.html' %}
+    {% block content %}
+    {% include 'includes/_navbar2.html' %}
+        <div class="container">
+          
+          {% block body %}{% endblock %}
+        </div>
+
+
+
+    <!-- ******************************************* -->
+    <!-- About Me Picture-->
+    <!-- ******************************************* -->
+    <div class="container-fluid text-center about-pic">
+      <img class="img-responsive" src="{{ url_for('static', filename='me.png') }}">
+    </div>
+
+
+
+
+    <!-- ******************************************* -->
+    <!-- About Me Text -->
+    <!-- ******************************************* -->
+    <div class="container-fluid about-columns">
+      <div class="row">
+        <div class="col-md-6 about-text">
+          <div class="tag-blue">ABOUT BIBEK GHIMIRE</div>
+          <p>My name is Bibek Ghimire and I am studying Electronics and Communication Engineering(ECE) at IOE Purwanchal Engineering Campus, Dharan Nepal.</p>
+          <p>My love for technology began when I first saw line following robot in an Educational Expo, when I was in lower secondary level.
+            I was amazed to see it working. Then, I started to surf internet to find out how it works. Although it was a small project, it exposed me to the field
+            of technology. This experience made me attracted towards to the ever evolving field of technology and gadgets.
+          </p>
+          <p>Electronics and Communication Engineering creates the devices or gadgets combining hardware and software aspects that organization
+            and people need to move forward. It plays a vital role in modernizing and advancement of human civilization.Thanks to this project, it guided me on my goal of becoming a ECE Engineer.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="tag-blue">EDUCATION</div>
+          <hr>
+          <div class="">
+            <h5>Institute of Engineering, Purwanchal Campus</h5>
+            <br>
+            <h6>Bachelor's of Engineering, Electronics and Communication Engineering</h6>
+            Sunsari, Nepal <br>
+            2015 - 2019
+          </div>
+          <br>
+          <hr> <br>
+          <div class="">
+            <h4>Technologies Learned</h4>
+            <br>
+            <h5><u>Hardware Based</u></h5>
+            <ul>
+              <li><b>Microcontroller Programming :</b> Arduino and Raspberry Pi</li>
+              <li>FPGA</li>
+            </ul>
+            <h5><u>Programming Languages</u></h5>
+            <ul>
+              <li>C / C++ </li>
+              <li>Python</li>
+              <li>SQlite Database</li>
+            </ul>
+            <h5><u>Other Technologies</u></h5>
+            HTML, CSS, Bootstrap, Flask, flsak-sqlalchemy, Git, Heroku App Deployment, OpenCV,
+            <br> OpenGL Framework
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>&copy; 2018 Made by Bibek Ghimire</footer>
+
+  {% endblock %}
+
+  </body>
+</html>

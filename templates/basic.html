@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+
+  h1{
+    color: #ffff66;
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+
+
+
+  #intro {
+    text-align: center;
+    padding: 40px;
+    font-size: 48px;
+  }
+
+  #background {
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-image: url('http://royalcet.ac.in/wp-content/uploads/2016/08/ECE.jpg');
+    -webkit-background-image: url('http://royalcet.ac.in/wp-content/uploads/2016/08/ECE.jpg');
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    /*background-size: 100%;*/
+    opacity: 0.6;
+    filter:alpha(opacity=80);
+  }
+
+  #photo {
+    margin-top: 0;
+    height: 500px;
+  }
+
+  .me {
+    height: 500px;
+    width: 450px;
+  }
+
+  .intro {
+    text-align: center;
+    /*padding: 18px;*/
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .tag-blue {
+    color: #fdbb07;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  .button {
+    margin: 0 auto; width: 180px;
+  }
+
+
+
+  .bg-steel {
+    background-color: #5f788a;
+  }
+
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .article-title {
+    color: #444444;
+  }
+
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+
+  .article-content {
+    white-space: pre-line;
+  }
+
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+
+  .account-heading {
+    font-size: 2.5rem;
+  }
+  .about-button.btn-light {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: #0D122B;
+  }
+
+  .experience {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    background-color: #0D122B;
+  }
+  .tag-white {
+    font-size: 45px;
+    font-weight: bold;
+    color: #0D122B;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .experience p {
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contact p {
+    color: #0D122B;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .links {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+  .links li {
+    display: inline;
+    padding: 0 10px;
+    color: #fff;
+}
+
+  footer{
+    text-align: center;
+    height: 50px;
+    color: #5c1;
+    background-color: #0D122B;
+  }
+
+  /**************************************************/
+  @media screen and (max-width: 1240px){
+	header{
+		width: 100%;
+	}
+  #photo {
+
+    height: auto;
+  }
+
+  .me {
+    height: auto;
+
+  }
+	img{
+		max-width: 100%;
+		max-height: auto;
+	}
+	.meintro{
+    max-height: auto;
+  }
+.experience {
+  width: 100%;
+  max-height: auto;
+}
+	footer{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px){
+	header{
+		width: 100%;
+	}
+    #background {
+      height: auto;
+    }
+	.meintro{
+		width: 100%;
+	}
+  .experience {
+    width: 100%;
+    max-height: auto;
+  }
+  .contact{
+    height: auto;
+  }
+	footer{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 320px){
+  .meintro{
+		width: 100%;
+	}
+  .experience {
+    width: 100%;
+    max-height: auto;
+  }
+}
+
+  </style>
+
+   {% if title %}
+
+  <title>Bibek Ghimire - {{ title }}</title>
+  {% else %}
+  <title>Bibek Ghimire Personal Website</title>
+  {% endif %}
+</head>
+<body>
+  <header class="site-header" style="height:50px">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-steel fixed-top">
+      <div class="container-fluid">
+        <img src="../static/bg.png" alt="BG" width="80" height="80">
+        <h1>&nbsp; <a class="nav-item nav-link" href="{{ url_for('home') }}" style="color:#fff">BIBEK GHIMIRE</a> &nbsp;</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+
+            <a class="nav-item nav-link" href="{{ url_for('projects') }}">Projects</a>
+          </div>
+          <!-- Navbar Right Side -->
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="{{ url_for('resume') }}">Resume</a>
+            <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+{% block basic %}
+
+{% endblock %}
+
+
+
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script async src="https://static.addtoany.com/menu/page.js"></script>
+    </body>
+    </html>
